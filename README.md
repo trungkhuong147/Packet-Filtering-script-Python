@@ -1,2 +1,2 @@
 # Packet Filtering script - Python
- Wireshark packet being parsing for data.
+This project was done on GENI, a total of 12 nodes was created and there will be traffic generated between 2 of the nodes using "iperf" while wiresharking was being run in the background to capture the traffic. The script will create a SSH connection to each of the nodes and then pull the wireshark captures after the traffic was stopped and then using "Scapy" to filter the data from the wireshark captures such as the type of traffic (UDP or TCP), the total number of packets, the data throughput...
