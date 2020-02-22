@@ -1,0 +1,229 @@
+TOPOLOGY
+	
+NODE 0 ----------- NODE 1
+|eth2		      |eth2
+|		      |	
+|		      |
+NODE 2		   NODE 3
+
+
+
+========================================
+PARAMIKO
+curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+
+sudo yum install python3 -y
+sudo pip3 install paramiko
+
+scappy
+sudo pip3 install --pre scapy[basic]
+
+https://incognitjoe.github.io/reading-pcap-with-scapy.html
+
+==============FInal topology=============
+Node #0:
+
+
+Login
+	
+ssh -i ~/.ssh/id_geni_ssh_rsa tk7311@pc1.uky.emulab.net -p 25610
+
+
+
+
+
+interface-0	pc1:eth0	024509444627	ipv4: 10.10.1.1
+interface-2	pc1:lo0	024705a8762d	ipv4: 10.10.2.1
+
+Node #1:
+
+
+Login
+	
+ssh -i ~/.ssh/id_geni_ssh_rsa tk7311@pc3.uky.emulab.net -p 25610
+
+
+
+interface-1	pc3:eth3	02d663608abe	ipv4: 10.10.1.2
+interface-5	pc3:lo0	02b633598d53	ipv4: 10.10.3.2
+
+Node #2:
+
+
+Login
+	
+ssh -i ~/.ssh/id_geni_ssh_rsa tk7311@pc1.uky.emulab.net -p 25611
+
+
+interface-3	pc1:lo0	023df2ac547b	ipv4: 10.10.2.2
+interface-6	pc1:eth0	0237a8c5dad8	ipv4: 10.10.4.1
+interface-8	pc1:lo0	027c507d25f0	ipv4: 10.10.5.1
+
+Node #3:
+
+Login
+	
+ssh -i ~/.ssh/id_geni_ssh_rsa tk7311@pc3.uky.emulab.net -p 25611
+
+interface-4	pc3:lo0	02403546b9e5	ipv4: 10.10.3.1
+interface-11	pc3:eth3	026a3c4ea8c1	ipv4: 10.10.6.2
+interface-12	pc3:eth3	02a028e938f5	ipv4: 10.10.7.1
+
+Node #4:
+
+Login
+	
+ssh -i ~/.ssh/id_geni_ssh_rsa tk7311@pc5.uky.emulab.net -p 25610
+
+
+interface-7	pc5:eth1	02c46f443141	ipv4: 10.10.4.2
+interface-20	pc5:lo0	020a65ed6d6a	ipv4: 10.10.11.1
+
+Node #5:
+
+
+Login
+
+ssh -i ~/.ssh/id_geni_ssh_rsa tk7311@pc1.uky.emulab.net -p 25612
+
+interface-9	pc1:lo0	02812893d5e6	ipv4: 10.10.5.2
+interface-18	pc1:lo0	02e50aa902a2	ipv4: 10.10.10.1
+
+Node #6:
+
+Login
+	
+ssh -i ~/.ssh/id_geni_ssh_rsa tk7311@pc2.uky.emulab.net -p 25611
+
+
+interface-10	pc2:eth0	0224d87ad565	ipv4: 10.10.6.1
+interface-14	pc2:lo0	02a119852442	ipv4: 10.10.8.1
+
+Node #7:
+
+
+Login
+	
+ssh -i ~/.ssh/id_geni_ssh_rsa tk7311@pc4.uky.emulab.net -p 25611
+
+interface-13	pc4:eth4	0285f575d1b9	ipv4: 10.10.7.2
+interface-16	pc4:lo0	02936646e823	ipv4: 10.10.9.1
+
+Node #8:
+
+
+Login
+
+ssh -i ~/.ssh/id_geni_ssh_rsa tk7311@pc5.uky.emulab.net -p 25611
+
+
+
+
+interface-21	pc5:lo0	0216d3a9de74	ipv4: 10.10.11.2
+
+Node #9:
+
+
+Login
+	
+ssh -i ~/.ssh/id_geni_ssh_rsa tk7311@pc1.uky.emulab.net -p 25613
+
+
+interface-19	pc1:lo0	02730c7fc0bc	ipv4: 10.10.10.2
+
+Node #10:
+
+
+
+Login
+	
+ssh -i ~/.ssh/id_geni_ssh_rsa tk7311@pc2.uky.emulab.net -p 25610
+
+
+
+
+interface-15	pc2:lo0	02b54000ae00	ipv4: 10.10.8.2
+
+Node #11:
+
+
+Login
+	
+ssh -i ~/.ssh/id_geni_ssh_rsa tk7311@pc4.uky.emulab.net -p 25610
+
+
+
+Interfaces	MAC
+	Layer 3
+
+
+interface-17	pc4:lo0	02e5eda90e5d	ipv4: 10.10.9.2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===================================
+
+Node #0:
+	node-0
+	pc4	2019-11-28T15:43:23.000Z	emulab-xen
+	node-0.final-project2.ch-geni-net.instageni.rnet.missouri.edu
+
+
+Login   ssh -i ~/.ssh/id_geni_ssh_rsa tk7311@pc4.instageni.rnet.missouri.edu -p 26210
+
+
+
+interface-0	pc4:lo0	0286c64eff34	ipv4: 10.10.1.1
+interface-2	pc4:lo0	021d497dcc9b	ipv4: 10.10.2.1
+
+Node #1:
+	node-1
+	pc4	2019-11-28T15:43:23.000Z	emulab-xen
+	node-1.final-project2.ch-geni-net.instageni.rnet.missouri.edu
+
+
+Login   ssh -i ~/.ssh/id_geni_ssh_rsa tk7311@pc4.instageni.rnet.missouri.edu -p 26211
+
+
+
+interface-1	pc4:lo0	02e3fea0b380	ipv4: 10.10.1.2
+interface-4	pc4:lo0	023fd41cbf70	ipv4: 10.10.3.1
+
+Node #2:
+	node-2
+	pc4	2019-11-28T15:43:23.000Z	emulab-xen
+	node-2.final-project2.ch-geni-net.instageni.rnet.missouri.edu
+
+
+Login   ssh -i ~/.ssh/id_geni_ssh_rsa tk7311@pc4.instageni.rnet.missouri.edu -p 26212
+	
+
+interface-3	pc4:lo0	02a8c2cc875e	ipv4: 10.10.2.2
+
+Node #3:
+	node-3
+	pc4	2019-11-28T15:43:23.000Z	emulab-xen
+	node-3.final-project2.ch-geni-net.instageni.rnet.missouri.edu
+
+
+Login    ssh -i ~/.ssh/id_geni_ssh_rsa tk7311@pc4.instageni.rnet.missouri.edu -p 26213
+
+interface-5	pc4:lo0	0279be8844b2	ipv4: 10.10.3.2
+
